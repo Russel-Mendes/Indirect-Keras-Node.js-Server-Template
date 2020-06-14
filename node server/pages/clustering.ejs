@@ -1,0 +1,84 @@
+<html>
+   <head>
+      <title>Machine Learning Server Processing: Clustering</title>
+      <link rel="stylesheet" type="text/css" href="page.css">
+   </head>
+
+   <body>
+    
+    <h1>Description</h1>
+        <p>This page will show the clustering representation  of the data. The program will try to analyze the uploaded data and cluster the unique classifications.
+            If there are no classifications, then clustering will be used to determine the number of possible classifications. This page will show the results of the data in 2 dimensions.
+            If the data set is beyond 2 dimensions, then the data will go under dimension redution. This page will different clustering algorithms and different dimension reduction techniques.
+        </p>
+    
+    <h2>Menu List</h2>
+    <ul>
+        <li>
+            <a href = "#K-Means">K-Means Algorithm</a>
+        </li>
+        <li>
+            <a href ="#Mean-Shift">Mean-Shift Algorithm</a>
+        </li>
+        <li>
+            <a href = "#EM">Expectation Maximation</a>
+        </li>
+        <li>
+            <a href = "#Dimension Reduction">Dimension Reduction Techniques</a>
+        </li>
+    </ul> 
+            
+        <div id = "K-Means">
+            <h3>K-Means</h3>
+                <p>K-Means is an iterative algorithm that tries to partition a dataset into K pre-defined non-overlapping clusters where each data point belongs to only one group. 
+                It assigns data points to a cluster such that variance between the cluster's centeroid and the datapoint is minimized across the set of clusters.
+                 More simliar data points are tightly clustered whileas loosely related data points are less dense.
+                </p>
+        </div>
+        
+        <div id = "K-Means + PCA" class = "image-tables">
+           <img src = "<%=config.K_Means_PCA_Identify%>"/>
+           <img src = "<%=config.K_Means_PCA_Possesion%>"/>
+        </div>
+        <div id = "K-Means + TSNE" class = "image-tables">
+            <img src = "<%=config.K_Means_TSNE_Identify%>"/>
+            <img src = "<%=config.K_Means_TSNE_Possesion%>"/>
+        </div>
+        <div id = "K-Means + UMAP" class = "image-tables">
+            <img src = "<%=config.K_Means_UMAP_Identify%>"/>
+            <img src = "<%=config.K_Means_UMAP_Possesion%>"/>
+        </div>
+
+        <div id = "Mean-Shift">
+            <h3>Mean-Shift</h3>
+                <p>Mean-Shift relies on Kernal Density Estimation. Based on the paremeter of kernal bandwidth, data points are clustered within a kernal. 
+                    Using a gaussian distribution, the algorithm seeks to minimize the probabilitistic variance. 
+                    Larger the kernal bandwidth, larger the allowed variance which a larger amount of data points being selected for a given cluster.
+                    The algorithm uses the kernal distribution to dynamically determine the number of clusters.
+                </p>
+        </div>
+        <div id = "Mean-Shift + PCA" class = "image-tables">
+
+        </div>
+        <div id = "Mean-Shift + TSNE" class = "image-tables"></div>
+        <div id = "Mean-Shift + UMAP" class = "image-tables"></div>
+        
+        <div id = "EM">
+            <h3>Expectation Maximation</h3>
+                <p>Expectation Maximation is a probabilitistic algorithm that conducts soft clustering. Each cluster is a gaussian distribution where the variance and mean is inferred.
+                    The model iteratively creates random gaussian models across data points for a set parameter and iteratively computes clusters. Unlike K-Means, this algorithm allows
+                    for data points to belong to clusters on a scale. This confidence scale leads to the soft clustering nature of this algorithm
+                </p>
+        </div>
+        <div id = "EM + PCA" class = "image-tables"></div>
+        <div id = "EM + TSNE" class = "image-tables"></div>
+        <div id = "EM + UMAP" class = "image-tables"></div>
+
+        <div id = "Dimension Reduction">
+            <h3>Principal Component Analysis</h3>
+            <h3>TSNE</h3>
+            <h3>Unifrom Manifold Approximation Projection</h3>
+        </div>
+
+   </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html> 
+<html> 
+  
+<head> 
+    <title>>Machine Learning Server Processing: Data Upload</title> 
+</head> 
+  
+<body> 
+    <h1>Upload Your data here</h1> 
+   
+    <p>
+        Accepted Data Types are .txt or .csv <br>
+        Data has to be formated as the following:<br>
+        classification, data 1, data 2, data 3, .... data <br>
+        If the classifications are unknown, please leave the first column as null. 
+    </p>
+
+    <form action="http://127.0.0.1:5000/data-upload" 
+      enctype="multipart/form-data" method="POST"> 
+        <span>Upload Data Item</span>   
+        <input type="file" name="data-file" required/> <br> 
+        <input type="submit" value="submit">  
+    </form> 
+</body> 
+  
+</html> 
