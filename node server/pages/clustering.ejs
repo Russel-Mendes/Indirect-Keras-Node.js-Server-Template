@@ -60,11 +60,19 @@
                     The algorithm uses the kernal distribution to dynamically determine the number of clusters.
                 </p>
         </div>
+  
         <div id = "Mean-Shift + PCA" class = "image-tables">
-
+            <img src = "<%=config.Mean_Shift_PCA_Identify%>"/>
+            <img src = "<%=config.Mean_Shift_PCA_Possesion%>"/>
         </div>
-        <div id = "Mean-Shift + TSNE" class = "image-tables"></div>
-        <div id = "Mean-Shift + UMAP" class = "image-tables"></div>
+        <div id = "Mean-Shift + TSNE" class = "image-tables">
+            <img src = "<%=config.Mean_Shift_PCA_Identify%>"/>
+            <img src = "<%=config.Mean_Shift_PCA_Possesion%>"/>
+        </div>
+        <div id = "Mean-Shift + UMAP" class = "image-tables">
+            <img src = "<%=config.Mean_Shift_PCA_Identify%>"/>
+            <img src = "<%=config.Mean_Shift_PCA_Possesion%>"/>
+        </div>
         
         <div id = "EM">
             <h3>Expectation Maximation</h3>
@@ -73,14 +81,47 @@
                     for data points to belong to clusters on a scale. This confidence scale leads to the soft clustering nature of this algorithm
                 </p>
         </div>
-        <div id = "EM + PCA" class = "image-tables"></div>
-        <div id = "EM + TSNE" class = "image-tables"></div>
-        <div id = "EM + UMAP" class = "image-tables"></div>
+        <div id = "EM + PCA" class = "image-tables">
+            <img src = "<%=config.EM_PCA_Identify%>"/>
+            <img src = "<%=config.EM_PCA_Possesion%>"/>
+        </div>
+        <div id = "EM + TSNE" class = "image-tables">
+            <img src = "<%=config.EM_PCA_Identify%>"/>
+            <img src = "<%=config.EM_PCA_Possesion%>"/>
+        </div>
+        <div id = "EM + UMAP" class = "image-tables">
+            <img src = "<%=config.EM_PCA_Identify%>"/>
+            <img src = "<%=config.EM_PCA_Possesion%>"/>
+        </div>
 
         <div id = "Dimension Reduction">
             <h3>Principal Component Analysis</h3>
+            <p>
+                PCA is a statistical procedure that uses an orthogonal transformation to convert a set of observations of possibly correlated variables into a set of values of linearly uncorrelated variables called principal components.
+                 In other words, PCA will conduct feature elimination feature extraction to linearly compress a dataset to a lower dimensionality. The algorithm fisrt takes the variables and creates a matrix
+                 It then computes the covariancee --relationship-- between the data in the matrix, and his process is repeated according to the number of principal components. 
+                 There are limitations to PCA. The algorthim is not scale invariant. 
+                 It maximizes variance between variables
+                 If the variables are correlated, then PCA will be effective in compressing the data. Otherwise, PCA orders them according to their variances
+                 PCA utilizes mean and variance matricies. If the data does not follow this distribution, mixed results will arise
+            </p>
             <h3>TSNE</h3>
-            <h3>Unifrom Manifold Approximation Projection</h3>
+            <p>
+                T-SNE is a machine learning algorithm for visualization. It takes high dimensionality data and compresses it down to a lower, but more managable set of data dimensions.
+                The algorithm works by calculating the probability of similarity of points in high-dimensional space and calculating the probability of similarity of points in the corresponding low-dimensional space. Neigbors are chosen by a Gaussian
+                It then minimizes the difference between these conditional probabilitiesin higher-dimensional and lower-dimensional space via
+                the minimized sum of Kullback-Leibler divergence using a gradient descent method. There are limitations to TSNE. First, it captures local relationships of data points.
+                It requires hyperparameter tuning and is sensitive to noisy Patterns.
+                The algorithm is very computation heavy. It may be advised to use PCA or other dimension reduction techniques as a intermediary before using t-SNE, especially if the data is sparse
+                The algorithm scales quadratically with number of objects also requring more memory
+            </p>
+            <h3>Uniform Manifold Approximation Projection</h3>
+            <p>
+                UMAP is a non-linear dimension reduction technique that can be used for visualisation. The embedding is found by searching for a low dimensional projection of the data that has the closest possible equivalent fuzzy topological structure through the use of manifolds. This technique is new and can be found in this research paper: McInnes, L, Healy, J, UMAP: Uniform Manifold Approximation and Projection for Dimension Reduction, ArXiv e-prints 1802.03426, 2018
+                Before the algorithm starts, the algorithms assumes the following: uniformly distributed Riemannian manifold data, locally constant Riemannian metric, locally connected manifold.
+                With these assumptions: the algorithm acts under topography and manifold theory. When you deal with higher dimension space, it can be imagined as a multidimensional shape encased by a 2D planar skin. This planar skin can be represented into lower dimension like a 2D unfoled representation of a cube
+                This algorithm uses fuzzy representations to model the data that can be utilized to derive metrics of a higher dimensional space. UMAP is a newer technique, needs to be more rigorously tested
+            </p>
         </div>
 
 
