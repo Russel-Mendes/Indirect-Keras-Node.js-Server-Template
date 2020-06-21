@@ -14,7 +14,6 @@ app.use(bodyParser.json());
 app.use( express.static( "Resources" ) );
 // var upload = multer({ dest: "Upload_folder_name" }) 
 // If you do not want to use diskStorage then uncomment it 
-    
   
 app.get("/",function(req,res){ 
     res.render("pages/index.ejs"); 
@@ -32,12 +31,8 @@ app.get("/data-upload",function(req,res){
     res.render("pages/data-upload.ejs"); 
 }) 
 app.get("/forecasting",function(req,res){ 
-    res.render("pages/forecasting.ejs"); 
+    res.render("pages/forecasting.ejs", {config}); 
 }) 
-
-
-
-
     
 // Port used for Node.JS will be port 8000 
 app.listen(8000,function(error) { 

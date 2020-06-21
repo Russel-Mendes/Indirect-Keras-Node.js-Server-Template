@@ -1,25 +1,26 @@
 {
-    "K_Means_PCA_Possesion" : "/Clustering Resources/K-Means/PCA/Identified Clusters - K-Means PCA.png",
-    "K_Means_PCA_Identify" : "/Clustering Resources/K-Means/PCA/Possesion Chart - K-Means PCA.png",
-    "K_Means_TSNE_Possesion" : "/Clustering Resources/K-Means/TSNE/Identified Clusters - K-Means TSNE.png",
-    "K_Means_TSNE_Identify" : "/Clustering Resources/K-Means/TSNE/Possesion Chart - K-Means TSNE.png",
-    "K_Means_UMAP_Possesion" : "/Clustering Resources/K-Means/UMAP/Identified Clusters - K-Means UMAP.png",
-    "K_Means_UMAP_Identify" : "/Clustering Resources/K-Means/UMAP/Possesion Chart - K-Means UMAP.png",
+    "K_Means_PCA_Possesion"  : "/Clustering Resources/K-Means/PCA/Possesion Chart - K-Means PCA.png",
+    "K_Means_PCA_Identify"   : "/Clustering Resources/K-Means/PCA/Identified Clusters - K-Means PCA.png",
+    "K_Means_TSNE_Possesion" : "/Clustering Resources/K-Means/TSNE/Possesion Chart - K-Means TSNE.png",
+    "K_Means_TSNE_Identify"  : "/Clustering Resources/K-Means/TSNE/Identified Clusters - K-Means TSNE.png",
+    "K_Means_UMAP_Possesion" : "/Clustering Resources/K-Means/UMAP/Possesion Chart - K-Means UMAP.png",
+    "K_Means_UMAP_Identify"  : "/Clustering Resources/K-Means/UMAP/Identified Clusters - K-Means UMAP.png",
 
-    "Mean_Shift_PCA_Possesion" : "root",
-    "Mean_Shift_PCA_Identify" : "root",
-    "Mean_Shift_TSNE_Possesion" : "root",
-    "Mean_Shift_TSNE_Identify" : "root",
-    "Mean_Shift_UMAP_Possesion" : "root",
-    "Mean_Shift_UMAP_Identify" : "root",
+    "Mean_Shift_PCA_Possesion"  : "/Clustering Resources/Mean-Shift/PCA/Possesion Chart - Mean-Shift PCA.png",
+    "Mean_Shift_PCA_Identify"   : "/Clustering Resources/Mean-Shift/PCA/Identified Clusters - Mean-Shift PCA.png",
+    "Mean_Shift_TSNE_Possesion" : "/Clustering Resources/Mean-Shift/TSNE/Possesion Chart - Mean-Shift TSNE.png",
+    "Mean_Shift_TSNE_Identify"  : "/Clustering Resources/Mean-Shift/TSNE/Identified Clusters - Mean-Shift TSNE.png",
+    "Mean_Shift_UMAP_Possesion" : "/Clustering Resources/Mean-Shift/UMAP/Possesion Chart - Mean-Shift UMAP.png",
+    "Mean_Shift_UMAP_Identify"  : "/Clustering Resources/Mean-Shift/UMAP/Identified Clusters - Mean-Shift UMAP.png",
 
-    "EM_PCA_Possesion" : "root",
-    "EM_PCA_Identify" : "root",
-    "EM_TSNE_Possesion" : "root",
-    "EM_TSNE_Identify" : "root",
-    "EM_UMAP_Possesion" : "root",
-    "EM_UMAP_Identify" : "root",
-
-
+    "EM_PCA_Possesion"  : "/Clustering Resources/Expectation Maximation/PCA/Possesion Chart - Expectation-Maximation PCA.png",
+    "EM_PCA_Identify"   : "/Clustering Resources/Expectation Maximation/PCA/Identified Clusters - Expectation-Maximation PCA.png",
+    "EM_TSNE_Possesion" : "/Clustering Resources/Expectation Maximation/TSNE/Possesion Chart - Expectation-Maximation TSNE.png",
+    "EM_TSNE_Identify"  : "/Clustering Resources/Expectation Maximation/TSNE/Identified Clusters - Expectation-Maximation TSNE.png",
+    "EM_UMAP_Possesion" : "/Clustering Resources/Expectation Maximation/UMAP/Possesion Chart - Expectation-Maximation UMAP.png",
+    "EM_UMAP_Identify"  : "/Clustering Resources/Expectation Maximation/UMAP/Identified Clusters - Expectation-Maximation UMAP.png",
+   
+   
+    "ForecastingChart" : "root",
     "password" : "foot"
 }
