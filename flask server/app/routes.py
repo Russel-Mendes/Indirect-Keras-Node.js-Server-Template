@@ -26,16 +26,14 @@ def populate_clusters():
     slave_object.K_Means(switch = 0, path_to_data = path_to_data, path_to_upload = Config.K_MEANS_PCA_UPLOAD_PATH, n_clusters = 3 )
     slave_object.K_Means(switch = 1, path_to_data = path_to_data, path_to_upload =  Config.K_MEANS_TSNE_UPLOAD_PATH, n_clusters = 3 )
     slave_object.K_Means(switch = 2, path_to_data = path_to_data, path_to_upload =  Config.K_MEANS_UMAP_UPLOAD_PATH, n_clusters = 3 )
-    '''
     #MeanShift
-    slave_object.Mean_Shift(switch = 0, path_to_data = path_to_data, path_to_upload = path_to_upload)
-    slave_object.Mean_Shift(switch = 1, path_to_data = path_to_data, path_to_upload = path_to_upload)
-    slave_object.Mean_Shift(switch = 2, path_to_data = path_to_data, path_to_upload = path_to_upload)
+    slave_object.Mean_Shift(switch = 0, path_to_data = path_to_data, path_to_upload = Config.MEAN_SHIFT_PCA_UPLOAD_PATH)
+    slave_object.Mean_Shift(switch = 1, path_to_data = path_to_data, path_to_upload = Config.MEAN_SHIFT_TSNE_UPLOAD_PATH)
+    slave_object.Mean_Shift(switch = 2, path_to_data = path_to_data, path_to_upload = Config.MEAN_SHIFT_UMAP_UPLOAD_PATH)
     #Expectation Maximaziation    
-    slave_object.Expectation_Maximation(switch = 0, path_to_data = path_to_data, path_to_upload = path_to_upload)
-    slave_object.Expectation_Maximation(switch = 1, path_to_data = path_to_data, path_to_upload = path_to_upload)
-    slave_object.Expectation_Maximation(switch = 2, path_to_data = path_to_data, path_to_upload = path_to_upload)
-    '''
+    slave_object.Expectation_Maximation(switch = 0, path_to_data = path_to_data, path_to_upload = Config.EXPECTATION_MAXIMIZATION_PCA_UPLOAD_PATH)
+    slave_object.Expectation_Maximation(switch = 1, path_to_data = path_to_data, path_to_upload = Config.EXPECTATION_MAXIMIZATION_TSNE_UPLOAD_PATH)
+    slave_object.Expectation_Maximation(switch = 2, path_to_data = path_to_data, path_to_upload = Config.EXPECTATION_MAXIMIZATION_UMAP_UPLOAD_PATH)
     
 
 
