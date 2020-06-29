@@ -11,25 +11,57 @@ from app.config import Config
 from app.calculations import Clustering
 
 
-
 def populate_clusters():
+    """
+    Cluster on the data defined in the data upload location. Save these clusters into a defined upload path
+    
+    Args:
+   
+    Returns:
+    
+    """
     slave_object = Clustering()
     path_to_data = Config.DATA_UPLOAD_LOCATION
     #KMeans
     slave_object.K_Means(switch = 0, path_to_data = path_to_data, path_to_upload = Config.K_MEANS_PCA_UPLOAD_PATH, n_clusters = 3 )
     slave_object.K_Means(switch = 1, path_to_data = path_to_data, path_to_upload =  Config.K_MEANS_TSNE_UPLOAD_PATH, n_clusters = 3 )
     slave_object.K_Means(switch = 2, path_to_data = path_to_data, path_to_upload =  Config.K_MEANS_UMAP_UPLOAD_PATH, n_clusters = 3 )
+    '''
+    #MeanShift
+    slave_object.Mean_Shift(switch = 0, path_to_data = path_to_data, path_to_upload = path_to_upload)
+    slave_object.Mean_Shift(switch = 1, path_to_data = path_to_data, path_to_upload = path_to_upload)
+    slave_object.Mean_Shift(switch = 2, path_to_data = path_to_data, path_to_upload = path_to_upload)
+    #Expectation Maximaziation    
+    slave_object.Expectation_Maximation(switch = 0, path_to_data = path_to_data, path_to_upload = path_to_upload)
+    slave_object.Expectation_Maximation(switch = 1, path_to_data = path_to_data, path_to_upload = path_to_upload)
+    slave_object.Expectation_Maximation(switch = 2, path_to_data = path_to_data, path_to_upload = path_to_upload)
+    '''
+    
+
 
 @app.route('/')
 @app.route('/index')
 def index():
-    user = {'username': 'Miguel'}
-    return render_template('welcome.html', title = 'Home', user = user)
-
+    """
+    Index location has no use
+    
+    Args:
+   
+    Returns:
+    
+    """
+    return "Active Server"
 
 @app.route('/data-upload', methods=['GET', 'POST'])
 def data_upload():
-
+    """
+    Get the file delivered to this location
+    
+    Args:
+   
+    Returns:
+    
+    """
     if request.method == 'POST':   
                
         img = open(Config.DATA_UPLOAD_LOCATION, "wb")
@@ -46,8 +78,15 @@ def data_upload():
  
 @app.route('/clustering-page', methods = ['Get', 'POST'])
 def clustering_suite():
-    populate_clusters()
-
+    """
+    Call the clustering location when this aspect of the webapp is called
     
+    Args:
+   
+    Returns:
+    
+    """
+    
+    populate_clusters()
     return "Function Finished"
     
