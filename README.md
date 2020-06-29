@@ -1,7 +1,7 @@
-# Indirect Keras Node.js Server Template Work In Progress
+# Offload Node.js Flask Server Work In Progress
 
 
-As Machine Learning becomes more effecient and more available to the masses, there more applications for the technology in many fields. One of the limiting factors for machine learning deployment are the large models for a task. Often times, a machine learning product has a large model which cannot be easily be deployed to the client. In addition to deployment issues, sometimes the model itself is proprietary. One solution to these problems is remote deployment through a webserver. This project tries to emulate this pipeline. By using a Node.js server that calls a remote Flask powered server housing a machine learning model, the client to product can be emulated.  
+As data processing becomes more effecient and more ubiquotous in products, there are more applications for the technology in many fields. One of the limiting factors for this technology are the large model. Often times, data models are large which limits deployment. In addition to deployment issues, sometimes the model itself is proprietary. One solution to these problems is remote deployment through a webserver. This project tries to emulate this pipeline. By using a Node.js server that calls a remote Flask powered server housing a machine learning model, the client to product can be emulated.  
 
 The goal of this project is to create an example webproduct. The website will be run with a Node.js server backend. This server will communicate with a Flask server for calculations. For the example, this project will emulate a basic classification and clustering website. 
 
