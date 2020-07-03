@@ -1,3 +1,4 @@
+const request = require('request');
 const express = require("express") 
 bodyParser = require('body-parser')
 const path = require("path") 
@@ -5,7 +6,6 @@ const multer = require("multer")
 const app = express() 
 var config = require("./config.json");
 
-    
 // View Engine Setup 
 app.set("views",path.join(__dirname,"")) 
 app.set("view engine","ejs") 
@@ -15,25 +15,31 @@ app.use( express.static( "Resources" ) );
 // var upload = multer({ dest: "Upload_folder_name" }) 
 // If you do not want to use diskStorage then uncomment it 
   
-app.get("/",function(req,res){ 
+app.get("/",function(req,res){
     res.render("pages/index.ejs"); 
 }) 
-app.get("/break-down",function(req,res){ 
+app.get("/break-down",function(req,res){
+
     res.render("pages/break-down.ejs"); 
 }) 
 app.get("/clustering",function(req,res){ 
-
-    console.log(config.K_Means_PCA_Possesion)
+    
     res.render("pages/clustering.ejs", {config}); 
 }) 
-//// TODO add a scrollbar image http://www.wickham43.net/imageswithascrollbar.php
 app.get("/data-upload",function(req,res){ 
-    res.render("pages/data-upload.ejs"); 
+    var fPromise = 
+    new Promise(function(resolve, reject){
+        request('http://127.0.0.1:5000/data-upload-count', { json: false }, (err, b, resp) => {    
+           // console.log(resp)
+            res.render("pages/data-upload.ejs", {num_files : resp}); 
+        });
+    });
 }) 
 app.get("/forecasting",function(req,res){ 
     res.render("pages/forecasting.ejs", {config}); 
 }) 
-    
+
+
 // Port used for Node.JS will be port 8000 
 app.listen(8000,function(error) { 
     if(error) throw error 

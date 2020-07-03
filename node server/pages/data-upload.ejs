@@ -14,6 +14,9 @@
         If the classifications are unknown, please leave the first column as null. 
     </p>
     
+    <h5>There is currently this many current items: <%= num_files %></h5>
+
+
     <form action="http://127.0.0.1:5000/data-upload" 
       enctype="multipart/form-data" method="POST"> 
         <span>Upload Data Item</span>   
@@ -21,6 +24,13 @@
         <input type="submit" value="submit">  
     </form> 
    
+
+    <form action="http://127.0.0.1:5000/empty-upload" 
+      enctype="multipart/form-data" method="POST"> 
+        <span>Purge All Files in Database</span>   
+        <input type="submit" value="submit">  
+    </form> 
+
     <div id = navigation>   
         <h2>Navigation Bar</h2>
         <ul>

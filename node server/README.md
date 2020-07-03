@@ -9,18 +9,18 @@ For the NodeJS portion of the code, the same process has to be applied. The user
 This repository has the downloaded dependencies already uploaded. Since the program is meant to be a replica of a larger system, a snapshot upload will suffice as an example deployment of this program. If there are any issues, please refer to the dependencies section of this program
 
 
-## Dependencies
+## Dependencies Used
 ### Python
 * Flask
-* Keras
 * Scipy
 * Numpy
 ### NodeJS
 * Express
 * Multper
+* request - 2.88.2
 
 ## Release Version
-Version 0.25
+Version 0.3
 
 ## Added Features
 * User can upload .txt or .csv files for the program to analyze
