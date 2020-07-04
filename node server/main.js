@@ -18,27 +18,14 @@ app.use( express.static( "Resources" ) );
 app.get("/",function(req,res){
     res.render("pages/index.ejs"); 
 }) 
-app.get("/break-down",function(req,res){
-
-    res.render("pages/break-down.ejs"); 
-}) 
 app.get("/clustering",function(req,res){ 
     
     res.render("pages/clustering.ejs", {config}); 
 }) 
 app.get("/data-upload",function(req,res){ 
-    var fPromise = 
-    new Promise(function(resolve, reject){
-        request('http://127.0.0.1:5000/data-upload-count', { json: false }, (err, b, resp) => {    
-           // console.log(resp)
-            res.render("pages/data-upload.ejs", {num_files : resp}); 
-        });
-    });
-}) 
-app.get("/forecasting",function(req,res){ 
-    res.render("pages/forecasting.ejs", {config}); 
-}) 
+    res.render("pages/data-upload.ejs");
 
+}) 
 
 // Port used for Node.JS will be port 8000 
 app.listen(8000,function(error) { 
