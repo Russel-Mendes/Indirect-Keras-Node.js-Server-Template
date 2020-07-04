@@ -9,9 +9,7 @@ from app import app
 from flask import request #import main Flask class and request object
 from app.config import Config
 from app.calculations import Clustering
-import os
 
-FILE_COUNT = 0
 
 def populate_clusters():
     """
@@ -75,9 +73,13 @@ def data_upload():
         print('request.form', request.form)
         print('request.files', request.files)
         
-        FILE_COUNT = FILE_COUNT + 1
-        return "File Received"
- 
+        try:
+            populate_clusters()
+            return "File Received"
+        except:
+            return "FILE HAS ERRORS"
+        
+
 @app.route('/clustering-page', methods = ['Get', 'POST'])
 def clustering_suite():
     """
@@ -92,22 +94,5 @@ def clustering_suite():
     populate_clusters()
     return "Function Finished"
 
-@app.route('/data-format-type', methods = ["GET"])
-def check_type_of_data():
-    #Check if data can be clusterd or forecasted
-
-    return "True"
-    
-@app.route('/data-upload-count', methods = ["GET"])
-def check_num_of_data():
-    global FILE_COUNT
-    return str(FILE_COUNT)
-
-@app.route('/empty-upload', methods = ["GET",'POST'])
-def purge_upload():
-    #TODO remove all files from upload dir
-    global FILE_COUNT
-    FILE_COUNT= 0
-    return "Purge Completed"
 
 
